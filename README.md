@@ -18,11 +18,11 @@
       
         2. Structural Patter:
           a. Adapter : The Adapter pattern is a design pattern which is commonly used to manage changes in development.
-          b. Decorator : 
+          b. Decorator : The Decorator pattern is a design pattern which gives to add new functionality to an existing object without altering its stucture.
           c. Facade:Facade is a structural design pattern which gives us a simplified interface of a complex sub system.
           
         3.Behavioral Pattern:
-          a. Strategy Pattern
+          a. Strategy Pattern: Strategy Pattern is a design pattern in which a class behavior or its algorithm can be changed at run time.
       
     Coupling: Coupling means the degree of one module depend on other module.
       	$storage = new Storage();
@@ -33,4 +33,4 @@
       	//storage components gives as constructor to user.
       	
     Dispatch: Dispatch is a process of select a method at run time.
-	Trait: Trait is simply a group of methods that you want include within another class. A Trait, like an abstract class, cannot be instantiated on it’s own.
+	Trait: Trait is simply a group of methods that you want include within another class. A Trait, like an abstract class, cannot be instantiated on itâ€™s own.
