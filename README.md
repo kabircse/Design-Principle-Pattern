@@ -10,7 +10,7 @@
         4. Concurrency Pattern
       
         1.Creational Pattern:
-          a. Abstract Factory: Abstract Factory pattern is a creational design pattern which creates factory mothod.
+          a. Abstract Factory: Abstract Factory pattern is a creational design pattern which creates factory method.
           b. Factory: Factory method pattern is a creational design pattern which creates another classes.
           c. Builder
           d. Lazy Initialization
