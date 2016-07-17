@@ -34,3 +34,7 @@
       	
     Dispatch: Dispatch is a process of select a method at run time.
 	Trait: Trait is simply a group of methods that you want include within another class. A Trait, like an abstract class, cannot be instantiated on it’s own.
+  
+  Easy Design Pattern:
+  1. http://code.tutsplus.com/articles/a-beginners-guide-to-design-patterns--net-12752
+  2. http://www.codeproject.com/Articles/1009532/Learn-Csharp-Design-patterns-step-by-step-with-a-p
