@@ -14,7 +14,7 @@
           b. Factory: Factory method pattern is a creational design pattern which creates another classes.
           c. Builder
           d. Lazy Initialization
-          e. Singleton
+          e. Singleton: Singleton is creational pattern which creates one instance of class in the duration of runtime.
       
         2. Structural Patter:
           a. Adapter : The Adapter pattern is a design pattern which is commonly used to manage changes in development.
@@ -23,7 +23,10 @@
           
         3.Behavioral Pattern:
           a. Strategy Pattern: Strategy Pattern is a design pattern in which a class behavior or its algorithm can be changed at run time.
-      
+       /*
+        The main difference between a "factory method" and an "abstract factory" is that the
+        factory method is a single method, and an abstract factory is an object.
+		*/
     Coupling: Coupling means the degree of one module depend on other module.
       	$storage = new Storage();
       	$user->new User($storage);//$user depend on $storage//
