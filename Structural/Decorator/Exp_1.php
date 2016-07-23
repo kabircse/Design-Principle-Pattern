@@ -34,58 +34,38 @@ class BookTitleDecorator {
     }
 }
 
-class BookTitleExclaimDecorator extends BookTitleDecorator {
-    private $btd;
-    public function __construct(BookTitleDecorator $btd_in) {
-        $this->btd = $btd_in;
-    }
-    function exclaimTitle() {
-        $this->btd->title = "!" . $this->btd->title . "!";
-    }
-}
-
 class BookTitleStarDecorator extends BookTitleDecorator {
     private $btd;
     public function __construct(BookTitleDecorator $btd_in) {
         $this->btd = $btd_in;
     }
     function starTitle() {
-        $this->btd->title = Str_replace(" ","*",$this->btd->title);
+        $this->btd->title = Str_replace(" "," * ",$this->btd->title);
     }
 }
 
-  writeln('BEGIN TESTING DECORATOR PATTERN');
-  writeln('');
-
-  $patternBook = new Book('Gamma, Helm, Johnson, and Vlissides', 'Design Patterns');
- 
+  $patternBook = new Book('Design Patterns','Kabir Hossain'); 
   $decorator = new BookTitleDecorator($patternBook);
   $starDecorator = new BookTitleStarDecorator($decorator);
-  $exclaimDecorator = new BookTitleExclaimDecorator($decorator);
  
-  writeln('showing title : ');
+  writeln('Showing title : ');
   writeln($decorator->showTitle());
   writeln('');
  
-  writeln('showing title after two exclaims added : ');
-  $exclaimDecorator->exclaimTitle();
-  $exclaimDecorator->exclaimTitle();
-  writeln($decorator->showTitle());
-  writeln('');
- 
-  writeln('showing title after star added : ');
+  writeln('Showing title after star added : ');
   $starDecorator->starTitle();
   writeln($decorator->showTitle());
-  writeln('');
- 
-  writeln('showing title after reset: ');
-  writeln($decorator->resetTitle());
-  writeln($decorator->showTitle());
-  writeln('');
+  writeln(''); 
 
-  writeln('END TESTING DECORATOR PATTERN');
 
   function writeln($line_in) {
     echo $line_in."<br/>";
   }
 
+/*
+    Showing title : 
+        Design Patterns
+    
+    Showing title after star added : 
+        Design * Patterns
+*/
