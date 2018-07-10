@@ -121,21 +121,22 @@ Example Program:
 
   The principle of interface separation (Interface segregation)
   Example program:
-   <?php
-      interface IItem
-      {
-          public function applyDiscount($discount);
-          public function applyPromocode($promocode);
+  
+     <?php
+        interface IItem
+        {
+            public function applyDiscount($discount);
+            public function applyPromocode($promocode);
 
-          public function setColor($color);
-          public function setSize($size);
+            public function setColor($color);
+            public function setSize($size);
 
-          public function setCondition($condition);
-          public function setPrice($price);
-      }
-      ?> 
+            public function setCondition($condition);
+            public function setPrice($price);
+        }
+       ?> 
   Solution Program:
-  <?php
+    <?php
     interface IItem
     {
         public function setCondition($condition);
@@ -206,42 +207,43 @@ Example Program:
         public function checkout($order){/*...*/}
     }
     ?>  
+     
 Solution:
-   <?php
-class Customer
-{
-    private $currentOrder = null;
+    <?php
+      class Customer
+      {
+          private $currentOrder = null;
 
-    public function buyItems(IOrderProcessor $processor)
-    {    
-        if(is_null($this->currentOrder)){
-            return false;
-        }
-        
-        return $processor->checkout($this->currentOrder);    
-    }
+          public function buyItems(IOrderProcessor $processor)
+          {    
+              if(is_null($this->currentOrder)){
+                  return false;
+              }
 
-    public function addItem($item){
-        if(is_null($this->currentOrder)){
-            $this->currentOrder = new Order();
-        }
-        return $this->currentOrder->addItem($item);
-    }
-    public function deleteItem($item){
-        if(is_null($this->currentOrder)){
-            return false;
-        }
-        return $this->currentOrder ->deleteItem($item);
-    }
-}
+              return $processor->checkout($this->currentOrder);    
+          }
 
-interface IOrderProcessor
-{
-    public function checkout($order);
-}
+          public function addItem($item){
+              if(is_null($this->currentOrder)){
+                  $this->currentOrder = new Order();
+              }
+              return $this->currentOrder->addItem($item);
+          }
+          public function deleteItem($item){
+              if(is_null($this->currentOrder)){
+                  return false;
+              }
+              return $this->currentOrder ->deleteItem($item);
+          }
+      }
 
-class OrderProcessor implements IOrderProcessor
-{
-    public function checkout($order){/*...*/}
-}
-?> 
+      interface IOrderProcessor
+      {
+          public function checkout($order);
+      }
+
+      class OrderProcessor implements IOrderProcessor
+      {
+          public function checkout($order){/*...*/}
+      }
+      ?> 
