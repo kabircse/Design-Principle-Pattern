@@ -4,10 +4,10 @@
     software design.
     
     Types of design pattern:
-        1. Creational Pattern
-        2. Structural Pattern
-        3. Behavioral Pattern
-        4. Concurrency Pattern
+        1. Creational Pattern: ~ is a way to create new objects which increases the flexibility and reusability of existing code.
+        2. Structural Pattern: ~ is a way to assemble objects and classes into a large structure which keeps the structure flexible and efficient.
+        3. Behavioral Pattern: ~ is a way to communicate between objects and the assignment of responsibilities between objects.
+        4. Concurrency Pattern:
       
         1.Creational Pattern:
           a. Abstract Factory: Abstract Factory pattern is a creational design pattern which creates factory method.
@@ -41,3 +41,4 @@
   Easy Design Pattern:
   1. http://code.tutsplus.com/articles/a-beginners-guide-to-design-patterns--net-12752
   2. http://www.codeproject.com/Articles/1009532/Learn-Csharp-Design-patterns-step-by-step-with-a-p
+  3. https://refactoring.guru/design-patterns/catalog
