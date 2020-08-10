@@ -1,3 +1,4 @@
+<?php
         // interface
         class Document {
           render() {
