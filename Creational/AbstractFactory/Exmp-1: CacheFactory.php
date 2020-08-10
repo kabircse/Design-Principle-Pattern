@@ -17,7 +17,7 @@
             return 'Php cache. ';
         }
     }   
-    class AbstractCacheFactory{
+    class CacheFactory{ // This is AbstractCacheFactory class
         private $user;
         public function __construct(Cache $cache){
             $this->user = $cache->getCache();
@@ -27,7 +27,7 @@
         }
     }
 	$cache = new phpCache();	
-    $output = new AbstractCacheFactory($cache);	
+    $output = new CacheFactory($cache);	
     //var_dump($output);
 	$output->cacheUser();
     
