@@ -1,3 +1,4 @@
+<?php
 public abstract class Loan {
     protected double interestRate;
 
