@@ -1,14 +1,10 @@
 <?php
-/*
-*
-*/
 Abstract class Button {
 	protected $html;
 	function getHtml(){
 		return $this->html;
 	}
 }
-
 class ImageButton extends Button{
 	protected $html = '<img src="">';
 }
