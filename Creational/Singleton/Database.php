@@ -1,6 +1,6 @@
 <?php
     class Database {
-        public static $instance;
+        private static $instance;
         
         public static function getInstance(){
             if(!isset(Database::$instance))
