@@ -1,4 +1,5 @@
 <?php
+//just a simple example, but it is not best use case
 class CocaCola {    
     private $healthy;
     private $tasty;
