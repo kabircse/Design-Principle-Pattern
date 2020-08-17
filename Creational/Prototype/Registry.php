@@ -53,7 +53,7 @@ class Registry {
   {
     $this->loadItems();
   }
-  public function createItem($type)
+  public function createItem($item)
   {
     $item = null;
     try {
