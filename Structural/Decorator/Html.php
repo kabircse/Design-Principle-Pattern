@@ -53,14 +53,17 @@ class ErrorDecorator extends HtmlDecorator
         return $this->element->__toString() . "<span>{$this->error}</span>\n";
     }
 }
+
 $input = new InputText('nickname');
 $labelled = new LabelDecorator($input);
 $labelled->setLabel('Nickname:');
 printf("%s\n", $labelled);
+
 $input = new InputText('nickname');
 $error = new ErrorDecorator($input);
 $error->setError('You must enter a unique nickname');
 printf("%s\n", $error);
+
 // Label + Error
 $input = new InputText('nickname');
 $labelled = new LabelDecorator($input);
