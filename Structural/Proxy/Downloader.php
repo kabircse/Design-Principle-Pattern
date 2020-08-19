@@ -92,3 +92,16 @@ echo "\n";
 echo "Executing the same client code with a proxy:\n";
 $proxy = new CachingDownloader($realSubject);
 clientCode($proxy);
+
+/* Output:
+    Executing client code with real subject:
+    Downloading a file from the Internet.
+    Downloaded bytes: 0
+    Downloading a file from the Internet.
+    Downloaded bytes: 0
+
+    Executing the same client code with a proxy:
+    CacheProxy MISS. Downloading a file from the Internet.
+    Downloaded bytes: 0
+    CacheProxy HIT. Retrieving result from cache.
+*/
