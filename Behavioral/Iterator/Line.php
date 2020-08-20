@@ -130,3 +130,35 @@ foreach ($lineCollection->getReverseIterator() as $line) {
  
 echo PHP_EOL;
 print_r($lineCollection);
+
+/*
+Output:
+LineCollection Object
+(
+    [lines:LineCollection:private] => Array
+        (
+            [0] => Line Object
+                (
+                    [id:Line:private] => 1
+                    [name:Line:private] => John
+                    [surname:Line:private] => Travolta
+                ) 
+            [1] => Line Object
+                (
+                    [id:Line:private] => 2
+                    [name:Line:private] => Robert
+                    [surname:Line:private] => De Niro
+                )
+        )
+) 
+1, John, Travolta
+2, Robert, De Niro 
+2, Robert, De Niro
+1, John, Travolta 
+LineCollection Object
+(
+    [lines:LineCollection:private] => Array
+        (
+        )
+)
+*/
