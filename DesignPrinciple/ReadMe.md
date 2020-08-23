@@ -1,5 +1,9 @@
-SOLID principle:
+# Design Principle
 
+Design Principle: Design principle is a series of guidelines that developers can use to build software in an easy way to maintain and extend.
+//Design principle is a set of guidelines that ensure OOP concept.
+
+SOLID principle:
 - Single responsibility
 - Open-closed
 - Liskov substitution
