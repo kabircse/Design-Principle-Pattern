@@ -11,8 +11,10 @@
         1.Creational Pattern:
           a. Abstract Factory: Abstract Factory is a creational design pattern which provides an interface for creating families of related or 
               dependent objects without specifying their concrete classes.
+	      // ~ is a creational design pattern which creates factory method.
           b. Factory: Factory method is a creational design pattern which provide an interface for creating an object but let subclasses decide which class
               to instantiate.
+	     // ~ is a creational design pattern which creates another classes.
           c. Builder: Builder is a creational design pattern which separates the construction of a complex object from its representation so that 
               the same construction process can create different representations.
           d. Lazy Initialization:
