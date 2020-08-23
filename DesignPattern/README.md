@@ -42,13 +42,13 @@
           g. Template:
           h. Visitor: 
           
-    * The main difference between a "factory method" and an "abstract factory" is that the factory method is a single method, and an abstract factory is an object.
-    
+    * The main difference between a "factory method" and an "abstract factory" is that the factory method is a single method, and an abstract factory is an object.    
     Coupling: Coupling means the degree of one module depend on other module.
       	$storage = new Storage();
       	$user->new User($storage);//$user depend on $storage//
       	
     Dependency Injection: Dependency Injection is where components are given through their constructor,method or directly into field as a dependency.
-      	//storage components gives as constructor to user.      	
+      	//storage components gives as constructor to user. 
+	
     Dispatch: Dispatch is a process of select a method at run time.
 	  Trait: Trait is simply a group of methods that you want include within another class. A Trait, like an abstract class, cannot be instantiated on it’s own.
