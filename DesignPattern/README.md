@@ -26,7 +26,8 @@
               It is often used to make existing classes work with others without modifying their source code.
           b. Decorator: The Decorator pattern is a design pattern which gives to add new functionality to an existing object without altering its stucture.
           c. Facade: Facade is a structural design pattern which gives us a simplified interface of a complex sub system.
-          d. Bridge: 
+          d. Bridge: Bridge is a structural design pattern that lets split a large class or a set of closely related classes into two separate hierarchies—abstraction and 
+	  	implementation—which can be developed independently of each other.
           e. Proxy: Proxy is a structural design pattern which provides a substitute or placeholder for another object.
           
         3.Behavioral Pattern: 
@@ -38,9 +39,10 @@
           d. Observer: Observer is a behavioral design pattern that lets us define a subscription mechanism to notify multiple objects about any events that
               happen to the object they're observing. //When one object change its state, all dependent objects are notified & updated automatically(Event-Subscriber-Listener).
           e. State: State is a behavioral design pattern that lets an object to alter its behavior when its internal state changes.
-          f. Command: 
-          g. Template:
-          h. Visitor: 
+          f. Command: Command is a behavioral design pattern that converts a request into a stand-alone object that contains all information about the request.
+          g. Template: Template is a behavioral design pattern that allows to define a skeleton of an algorithm in a base class and let subclasses override the steps without
+	  	changing the overall algorithm’s structure.
+          h. Visitor: Visitor is a behavioral design pattern that allows adding new behaviors to existing class hierarchy without altering any existing code.
           
     * The main difference between a "factory method" and an "abstract factory" is that the factory method is a single method, and an abstract factory is an object.    
     Coupling: Coupling means the degree of one module depend on other module.
