@@ -1,4 +1,5 @@
 <?php
+// There is something wrong.
 abstract class Item {  
   private $title;
   private $price;
