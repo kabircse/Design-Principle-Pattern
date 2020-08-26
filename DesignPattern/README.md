@@ -25,6 +25,7 @@
         2. Structural Patter:
           a. Adapter: The Adapter pattern is a design pattern which converts the interface of a class into another interface clients expect.
               It is often used to make existing classes work with others without modifying their source code.
+	      //Adapter pattern lets you wrap an otherwise incompatible object in an adapter to make it compatible with another class.
           b. Decorator: The Decorator pattern is a design pattern which gives to add new functionality to an existing object without altering its stucture.
           c. Facade: Facade is a structural design pattern which gives us a simplified interface of a complex sub system.
           d. Bridge: Bridge is a structural design pattern that lets split a large class or a set of closely related classes into two separate hierarchies—abstraction and 
