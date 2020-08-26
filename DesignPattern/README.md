@@ -17,7 +17,8 @@
 	     // ~ is a creational design pattern which creates another object. Also known as Virtual Constructor.
           c. Builder: Builder is a creational design pattern which separates the construction of a complex object from its representation so that 
               the same construction process can create different representations.
-          d. Lazy Initialization:
+          d. Lazy Initialization: Lazy Initialization is a way to delaying initialization of resources or objects until they’re actually needed to 
+	  	improve performance and save system resources. 
           e. Singleton: Singleton is creational design pattern which creates one instance of a class in the duration of runtime.
           f. Prototype: Prototype is creational design pattern that lets you copy existing objects without making your code dependent on their classes.
       
