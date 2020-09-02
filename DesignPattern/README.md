@@ -3,49 +3,54 @@
     Design Pattern: Design pattern is a general repeatable solution to a commonly occurring problem in software design.
     
     Types of design pattern:
-        1. Creational Pattern: ~ is a way to create new objects which increases the flexibility and reusability of existing code.
-        2. Structural Pattern: ~ is a way to assemble objects and classes into a large structure which keeps the structure flexible and efficient.
-        3. Behavioral Pattern: ~ is a way to communicate between objects and the assignment of responsibilities between objects.
-        4. Concurrency Pattern:
+        A. Creational Pattern: ~ is a way to create new objects which increases the flexibility and reusability of existing code.
+        B. Structural Pattern: ~ is a way to assemble objects and classes into a large structure which keeps the structure flexible and efficient.
+        C. Behavioral Pattern: ~ is a way to communicate between objects and the assignment of responsibilities between objects.
+        D. Concurrency Pattern:
       
-        1.Creational Pattern:
-          a. Abstract Factory: Abstract Factory is a creational design pattern which provides an interface for creating families of related or 
+        A.Creational Pattern:
+          1. Abstract Factory: Abstract Factory is a creational design pattern which provides an interface for creating families of related or 
               dependent objects without specifying their concrete classes.
 	      // ~ is a creational design pattern which creates factory method.
-          b. Factory: Factory method is a creational design pattern which provides an interface for creating an object but let the subclasses decide which class
+          2. Factory: Factory method is a creational design pattern which provides an interface for creating an object but let the subclasses decide which class
               to instantiate.
 	     // ~ is a creational design pattern which creates another object. Also known as Virtual Constructor.
-          c. Builder: Builder is a creational design pattern which separates the construction of a complex object from its representation so that 
+          3. Builder: Builder is a creational design pattern which separates the construction of a complex object from its representation so that 
               the same construction process can create different representations.
-          d. Lazy Initialization: Lazy Initialization is a way to delaying initialization of resources or objects until they’re actually needed to 
+          4. Lazy Initialization: Lazy Initialization is a way to delaying initialization of resources or objects until they’re actually needed to 
 	  	improve performance and save system resources. 
-          e. Singleton: Singleton is creational design pattern which creates one instance of a class in the duration of runtime.
-          f. Prototype: Prototype is creational design pattern that lets you copy existing objects without making your code dependent on their classes.
+          5. Singleton: Singleton is creational design pattern which creates one instance of a class in the duration of runtime.
+          6. Prototype: Prototype is creational design pattern that lets you copy existing objects without making your code dependent on their classes.
       
-        2. Structural Patter:
-          a. Adapter: The Adapter pattern is a design pattern which converts the interface of a class into another interface clients expect.
+        B. Structural Patter:
+          1. Adapter: The Adapter pattern is a design pattern which converts the interface of a class into another interface clients expect.
               It is often used to make existing classes work with others without modifying their source code.
 	      //Adapter pattern lets you wrap an otherwise incompatible object in an adapter to make it compatible with another class.
-          b. Decorator: The Decorator pattern is a design pattern which gives to add new functionality to an existing object without altering its stucture.
-          c. Facade: Facade is a structural design pattern which gives us a simplified interface of a complex sub system.
-          d. Bridge: Bridge is a structural design pattern that decouples an abstraction from its implementation so that the two can vary independently.
+          2. Decorator: The Decorator pattern is a design pattern which gives to add new functionality to an existing object without altering its stucture.
+          3. Facade: Facade is a structural design pattern which gives us a simplified interface of a complex sub system.
+          4. Bridge: Bridge is a structural design pattern that decouples an abstraction from its implementation so that the two can vary independently.
 		//Bridge is a structural design pattern that lets split a large class or a set of closely related classes into two separate hierarchies—abstraction and 
 	  	implementation—which can be developed independently of each other.
-          e. Proxy: Proxy is a structural design pattern which provides a substitute or placeholder for another object.
+          5. Proxy: Proxy is a structural design pattern which provides a substitute or placeholder for another object.
+	  6. Flyweight: Flyweight is a structural design pattern that allows programs to support vast quantities of objects by keeping their memory consumption low.
+	  7. Composite:
           
-        3.Behavioral Pattern: 
-          a. Chain of Responsibility: Chain of Responsibility is a behavioral design pattern that lets us pass requests along a chain of handlers.
+        C.Behavioral Pattern: 
+          1. Chain of Responsibility: Chain of Responsibility is a behavioral design pattern that lets us pass requests along a chain of handlers.
               Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
-          b. Strategy Pattern: Strategy Pattern is a design pattern in which a class behavior or its algorithm can be changed at run time.
+          2. Strategy Pattern: Strategy Pattern is a design pattern in which a class behavior or its algorithm can be changed at run time.
               //Define a family of algorithms, put each of then into a separate class and make their objects interchangeable.
-          c. Iterator: Iterator is a behavioral design pattern that lets us traverse elements of a collection without exposing its underlying representation.
-          d. Observer: Observer is a behavioral design pattern that lets us define a subscription mechanism to notify multiple objects about any events that
+          3. Iterator: Iterator is a behavioral design pattern that lets us traverse elements of a collection without exposing its underlying representation.
+          4. Observer: Observer is a behavioral design pattern that lets us define a subscription mechanism to notify multiple objects about any events that
               happen to the object they're observing. //When one object change its state, all dependent objects are notified & updated automatically(Event-Subscriber-Listener).
-          e. State: State is a behavioral design pattern that lets an object to alter its behavior when its internal state changes.
-          f. Command: Command is a behavioral design pattern that converts a request into a stand-alone object that contains all information about the request.
-          g. Template: Template is a behavioral design pattern that allows to define a skeleton of an algorithm in a base class and let subclasses override the steps without
+          5. State: State is a behavioral design pattern that lets an object to alter its behavior when its internal state changes.
+          6. Command: Command is a behavioral design pattern that converts a request into a stand-alone object that contains all information about the request.
+          7. Template: Template is a behavioral design pattern that allows to define a skeleton of an algorithm in a base class and let subclasses override the steps without
 	  	changing the overall algorithm’s structure.
-          h. Visitor: Visitor is a behavioral design pattern that allows adding new behaviors to existing class hierarchy without altering any existing code.
+          8. Visitor: Visitor is a behavioral design pattern that allows adding new behaviors to existing class hierarchy without altering any existing code.
+	  9. Interpreter: 
+	  10. Mediator:
+	  11. Memento:
           
     * The main difference between a "factory method" and an "abstract factory" is that the factory method is a single method, and an abstract factory is an object.    
     Coupling: Coupling means the degree of one module depend on other module.
