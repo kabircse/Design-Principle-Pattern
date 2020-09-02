@@ -4,7 +4,7 @@ interface Coffee
     public function getCost();
     public function getDescription();
 }
-class SimpleCoffee implements Coffee
+class SimpleCoffee implements Coffee //Concrete component
 {
     public function getCost()
     {
