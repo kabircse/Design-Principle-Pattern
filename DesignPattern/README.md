@@ -48,9 +48,9 @@
           7. Template: Template is a behavioral design pattern that allows to define a skeleton of an algorithm in a base class and let subclasses override the steps without
 	  	changing the overall algorithm’s structure.
           8. Visitor: Visitor is a behavioral design pattern that allows adding new behaviors to existing class hierarchy without altering any existing code.
-	  9. Interpreter: 
-	  10. Mediator:
-	  11. Memento:
+          9. Interpreter: 
+          10. Mediator: Mediator is a behavioral design pattern that defines an object that encapsulates how a set of objects interact. It reduces the coupling between the 			classes communicating with each other.
+          11. Memento: Memento pattern is a behavioral design pattern that provides the ability to restore an object to its previous state (undo via rollback).
           
     * The main difference between a "factory method" and an "abstract factory" is that the factory method is a single method, and an abstract factory is an object.    
     Coupling: Coupling means the degree of one module depend on other module.
