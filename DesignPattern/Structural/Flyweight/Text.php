@@ -69,7 +69,9 @@ for ($i = 0; $i <= 10; $i++) {
         foreach ($this->fonts as $font) {
             $flyweight = $factory->get($char);
             $rendered = $flyweight->render($font);
-            echo(sprintf('Character %s with font %s', $char, $font), $rendered);
+            // Output of the booth line should be same;
+            echo(sprintf('Character %s with font %s', $char, $font));
+            echo $rendered;
         }
     }
 }
@@ -77,10 +79,14 @@ for ($i = 0; $i <= 10; $i++) {
 foreach ($this->fonts as $word) {
     $flyweight = $factory->get($word);
     $rendered = $flyweight->render('foobar');
-    echo(sprintf('Word %s with font foobar', $word), $rendered);
+    // Output of the booth line should be same;
+    echo(sprintf('Word %s with font foobar', $word));
+    echo $rendered;
 }
 
 // Flyweight pattern ensures that instances are shared
 // instead of having hundreds of thousands of individual objects
 // there must be one instance for every char that has been reused for displaying in different fonts
-echo (count($this->characters) + count($this->fonts), $factory);
+// Output of the booth line should be same;
+echo (count($this->characters) + count($this->fonts));
+echo $factory
