@@ -32,8 +32,8 @@
 		//Bridge is a structural design pattern that lets split a large class or a set of closely related classes into two separate hierarchies—abstraction and 
 	  	implementation—which can be developed independently of each other.
           5. Proxy: Proxy is a structural design pattern which provides a substitute or placeholder for another object.
-	  6. Flyweight: Flyweight is a structural design pattern that allows programs to support vast quantities of objects by keeping their memory consumption low.
-	  7. Composite:
+          6. Flyweight: Flyweight is a structural design pattern that allows programs to support vast quantities of objects by keeping their memory consumption low.
+          7. Composite: Composite is a structural design pattern that allows composing objects into a tree-like structure and work with it as a singular object.
           
         C.Behavioral Pattern: 
           1. Chain of Responsibility: Chain of Responsibility is a behavioral design pattern that lets us pass requests along a chain of handlers.
