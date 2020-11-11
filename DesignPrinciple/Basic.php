@@ -11,7 +11,10 @@ Design principle is a guideline for developing software that are easy to maintai
 Benefit:
 Clean code, Code smells, Maintainable and expandable, Integrated in Agile methodologies.
 
-1. Single Responsibility Principle (SRP): A class should have one and only one reason to change, meaning that a class should have only one feature/functionality/job but not means one method. 
+1. Single Responsibility Principle (SRP): A class should have one and only one reason to change, meaning that a class should have only 
+  one feature/functionality/job but not means one method. 
+
+Combine the things that change for the same reasons. Separate those things that change for different reasons.
 
 Bad (Violation SRP): This class related two features, animal properties and animal database management. 
 <?php
@@ -92,6 +95,9 @@ Now, if we add a new animal, AnimalSound doesn’t need to change. All we need t
 LSP states that objects of the same superclass should be able to be swapped with each other without breaking anything.
 If we have a Cat and a Dog class derived from an Animal class, any functions using the Animal class should be able to use Cat or Dog and behave normally.
 
+1. Any derived class should be able to substitute its parent class
+2. Every class that implements an interface must be able to substitute any reference throughout the code that implements the same interface.
+
 Bad (Violation Liskov): In this example animal classes fly method return string, but dog fly method returns objet. It violated Liskov. According to Liskov super class and child class return type must be same on the exchanging the class object.
 <?php
 class Animal
@@ -149,6 +155,9 @@ The bottom line here is that if you find you are overriding a lot of code then m
 
 4. Interface Segregation Principle (ISP):
 ISP states that "Clients should not be forced to depend upon interfaces that they do not use."
+
+1. Changing one method in a class should not affect classes that do not depend on it.
+2 Replace flat interfaces with many small,specific interfaces
 
 Bad (Violation ISP):
 <?php
@@ -241,6 +250,8 @@ This principle states two essential things:
 	* High-level modules should not depend on low-level modules. Both should depend on abstractions.
 	* Abstractions should not depend upon details. Details should depend on abstractions.
 DIP keeps high-level modules from knowing the details of its low-level modules and setting them up. It can accomplish this through DI. A huge benefit of this is that it reduces the coupling between modules. Coupling is a very bad development pattern because it makes your code hard to refactor.
+
+(High Level mean like as controller who is depending model,interface or other classs those are called low level modules)
 
 Bad (Violation DIP):
 <?php
