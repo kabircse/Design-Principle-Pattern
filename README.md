@@ -11,11 +11,13 @@ Object-Oriented Programming (OOP) is a programming paradigm based on the concept
 4. **Polymorphism:** Polymorphism means having the ability to take different forms. In OOP, it allows objects of different classes to be treated as objects of a common superclass. This allows for flexibility in handling different types of objects through a uniform interface.
 
 
-## [Design Principle: (Low level, generate guidelines).](./)
+
+## [Design Principle: (Low level, generate guidelines).](./DesignPrinciple/README.md)
 Design principles are guidelines or best practices that help in creating maintainable, flexible, and understandable software.
 OOP provides a way to structure code using objects and classes, design principles guide how to create these objects and classes effectively. 
 
-## [Design Pattern: (High-level, concrete code).](./DesignPrinciple/README.md)
+
+## [Design Pattern: (High-level, concrete code).](./DesignPattern/README.md)
 The design pattern is a general repeatable solution to a commonly occurring problem in software design.
 
 _Principles are rules while patterns are their concrete example._
