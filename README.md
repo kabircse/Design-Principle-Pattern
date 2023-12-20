@@ -1,3 +1,5 @@
-Design Principle: low level, generate guideline.
-Design Patterns->high level,concrete code.
-Principles are rule while patterns are their concrete example.
+**Design Principle:** Low level, generate guidelines.
+
+**Design Pattern:** High-level, concrete code.
+
+_Principles are rules while patterns are their concrete example._
