@@ -61,14 +61,24 @@ echo $cat->makeSound(); // Output: Meow
 }
 
 class Circle implements Shape {
+    public $sideLength;
+    public function __construct($sideLength = null) {
+         $this->sideLength = $sideLength;
+    }    
     public function calculateArea() {
         // Calculation logic for circle's area
+        return pi*$this->sideLength*$this->sideLength;
     }
 }
 
 class Square implements Shape {
+    public $sideLength;
+    public function __construct($sideLength = null) {
+         $this->sideLength = $sideLength;
+    }    
     public function calculateArea() {
         // Calculation logic for square's area
+        return $this->sideLength*$this->sideLength;
     }
 }
 
@@ -76,8 +86,8 @@ function printArea(Shape $shape) {
     echo $shape->calculateArea();
 }
 
-$circle = new Circle();
-$square = new Square();
+$circle = new Circle(4);
+$square = new Square(5);
 
 printArea($circle); // Output: Circle's area
 printArea($square); // Output: Square's area
