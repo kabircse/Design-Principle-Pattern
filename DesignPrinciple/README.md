@@ -7,8 +7,9 @@
 2. **Open-closed Principle (OCP)**: Entities should be open for extension but closed for modification.
 3. **Liskov Substitution Principle (LSP)**: Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.
 4. **Interface Segregation Principle (ISP)**: A client should not be forced to implement interfaces they don't use, and classes should not be forced to depend on methods they do not use.
-5. **Dependency Inversion Principle (DIP)**: It states that high-level modules/classes should not depend on low-level modules/classes but should depend on abstractions/interfaces. Additionally, abstractions should not depend on details; rather, details should depend on abstractions.
+5. **Dependency Inversion Principle (DIP)**: It states that high-level (has more dependency) modules/classes should not depend on low-level(low dependency/no dependency) modules/classes but should depend on abstractions/interfaces. Additionally, abstractions should not depend on details; rather, details should depend on abstractions.
 Decoupling between modules by using abstractions (interfaces or abstract classes) to facilitate a flexible and interchangeable system.
+
 
 Example not following any SOLID principle:
 ```php
