@@ -3,13 +3,13 @@
 //Design principle is a set of guidelines that ensure the OOP concept.
 
 **SOLID principle:**
-1. Single Responsibility
-2. Open-closed
-3. Liskov substitution
-4. Interface segregation
-5. Dependency inversion
+1. Single Responsibility (SRP): A class should have only one reason to change.
+2. Open-closed (OCP): Entities should be open for extension but closed for modification.
+3. Liskov substitution (LSP): Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.
+4. Interface segregation () :
+5. Dependency inversion (DI) : 
 
-Example Program:
+Example code not following any SOLID principle:
 ```php
     class Order
     {
@@ -29,7 +29,7 @@ Example Program:
     }
 ``` 
     
-1. **Single Responsibility:**
+1. **Single Responsibility:** Following SRP
 ```php
         class Order
         {
@@ -55,8 +55,7 @@ Example Program:
         }
 ``` 
         
-2. **Open-Closed Principle:**
-Example Program:
+2. **Open-Closed Principle:** Example program not following OCP:
 ```php
         class OrderRepository
         {
@@ -77,8 +76,15 @@ Example Program:
             public function delete($order){/*...*/}
         }
 ``` 
-Solution Program:   
+Solution code following OCP:   
 ```php
+        interface IOrderSource
+        {
+            public function load($orderID);
+            public function save($order);
+            public function update($order);
+            public function delete($order);
+        }
         class OrderRepository
         {
             private $source;
@@ -95,14 +101,6 @@ Solution Program:
 
             public function save($order){/*...*/}
             public function update($order){/*...*/}
-        }
-
-        interface IOrderSource
-        {
-            public function load($orderID);
-            public function save($order);
-            public function update($order);
-            public function delete($order);
         }
 
         class MySQLOrderSource implements IOrderSource
@@ -123,11 +121,9 @@ Solution Program:
 ```
 
 3. **Liskov Substitution Principle (LSP):**
-Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.
 
-Example Program:
+Example code not following LSP:
 ```php
-// Not following LSP
 class Rectangle {
     protected $width;
     protected $height;
@@ -165,7 +161,7 @@ echo $rectangle->area(); // Output: 16, but it should be 20 for a rectangle
 ```
 
 4. **The principle of interface separation (Interface segregation)**
-Example program:
+Example code without Interface segregation:
   
 ```php
         interface IItem
@@ -180,7 +176,7 @@ Example program:
             public function setPrice($price);
         }
 ``` 
-Solution Program:
+Solution code following Interface segregation:
 ```php
     interface IItem
     {
@@ -217,9 +213,10 @@ Solution Program:
         public function setSize($size){/*...*/}
         public function setMaterial($material){/*...*/}
     }
-``` 
+```
+
 5. **Principle of Dependency Inversion:**
-Example Program:
+Example code not following DI:
 ```php
     class Customer
     {
@@ -253,7 +250,7 @@ Example Program:
     }
 ```  
      
-Solution:
+Solution code following Interface segregation:
 ```php
 class Customer
       {
