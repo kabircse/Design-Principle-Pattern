@@ -3,13 +3,14 @@
 //Design principle is a set of guidelines that ensure the OOP concept.
 
 **SOLID principle:**
-1. Single Responsibility (SRP): A class should have only one reason to change.
-2. Open-closed (OCP): Entities should be open for extension but closed for modification.
-3. Liskov substitution (LSP): Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.
-4. Interface segregation () :
-5. Dependency inversion (DI) : 
+1. **Single Responsibility Principle (SRP)**: A class should have only one reason to change.
+2. **Open-closed Principle (OCP)**: Entities should be open for extension but closed for modification.
+3. **Liskov Substitution Principle (LSP)**: Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.
+4. **Interface Segregation Principle (ISP)**: A client should not be forced to implement interfaces they don't use, and classes should not be forced to depend on methods they do not use.
+5. **Dependency Inversion Principle (DIP)**: It states that high-level modules/classes should not depend on low-level modules/classes but should depend on abstractions/interfaces. Additionally, abstractions should not depend on details; rather, details should depend on abstractions.
+Decoupling between modules by using abstractions (interfaces or abstract classes) to facilitate a flexible and interchangeable system.
 
-Example code not following any SOLID principle:
+Example not following any SOLID principle:
 ```php
     class Order
     {
@@ -29,7 +30,7 @@ Example code not following any SOLID principle:
     }
 ``` 
     
-1. **Single Responsibility:** Following SRP
+1. Following SRP
 ```php
         class Order
         {
@@ -55,7 +56,9 @@ Example code not following any SOLID principle:
         }
 ``` 
         
-2. **Open-Closed Principle:** Example program not following OCP:
+2. **Open-Closed Principle:**
+
+Not following OCP:
 ```php
         class OrderRepository
         {
@@ -76,7 +79,7 @@ Example code not following any SOLID principle:
             public function delete($order){/*...*/}
         }
 ``` 
-Solution code following OCP:   
+Following OCP:   
 ```php
         interface IOrderSource
         {
@@ -122,7 +125,31 @@ Solution code following OCP:
 
 3. **Liskov Substitution Principle (LSP):**
 
-Example code not following LSP:
+Not following LSP:
+```php
+class Rectangle {
+    public function setWidth($width) {
+        // Set width
+    }
+    public function setHeight($height) {
+        // Set height
+    }
+
+    public function getArea() {
+        return $this->width * $this->height;
+    }
+}
+
+class Square extends Rectangle
+{
+    public function setWidth($width) {
+        $this->width = $this->height = $width; // Violates LSP
+    }
+}
+```
+
+Following LSP:
+
 ```php
 class Rectangle {
     protected $width;
@@ -157,11 +184,12 @@ $rectangle = new Square();
 $rectangle->setWidth(5);
 $rectangle->setHeight(4);
 
-echo $rectangle->area(); // Output: 16, but it should be 20 for a rectangle
+echo $rectangle->area(); // Output: 16. But it should be 20 for a rectangle
 ```
 
-4. **The principle of interface separation (Interface segregation)**
-Example code without Interface segregation:
+4. **Interface Segregation Principle (ISP)**
+
+Not following ISP:
   
 ```php
         interface IItem
@@ -175,8 +203,10 @@ Example code without Interface segregation:
             public function setCondition($condition);
             public function setPrice($price);
         }
-``` 
-Solution code following Interface segregation:
+```
+
+No following ISP:
+
 ```php
     interface IItem
     {
@@ -216,7 +246,9 @@ Solution code following Interface segregation:
 ```
 
 5. **Principle of Dependency Inversion:**
-Example code not following DI:
+
+Not following DIP:
+
 ```php
     class Customer
     {
@@ -250,7 +282,8 @@ Example code not following DI:
     }
 ```  
      
-Solution code following Interface segregation:
+Following Interface segregation:
+
 ```php
 class Customer
       {
