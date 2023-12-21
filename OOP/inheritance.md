@@ -16,7 +16,7 @@ There are four types of inheritance in PHP:
 
 1. **Single inheritance:** This is the most common type of inheritance, and it occurs when a new class inherits from a single existing class.
 2. **Multiple inheritance:** This occurs when a new class inherits from two or more existing classes.
-3. **Hierarchical inheritance:** This occurs when a class inherits from another class, which in turn inherits from another class, and so on.
+3. **Hierarchical inheritance:** Refers to a structure where multiple classes are derived from a single base or parent class. In this scenario, each subclass or child class inherits properties and methods from the same parent class, creating a hierarchy of classes.
 4. **Interface inheritance:** This occurs when a class implements one or more interfaces.
 
 # Example
@@ -177,7 +177,67 @@ Each of these techniques has its own advantages and disadvantages. The best appr
 
 
 3. **Hierarchical inheritance:**
-   
+```php
+class Animal {
+    protected $name;
+    protected $age;
+    protected $species;
+
+    public function __construct($name, $age, $species) {
+        $this->name = $name;
+        $this->age = $age;
+        $this->species = $species;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getAge() {
+        return $this->age;
+    }
+
+    public function getSpecies() {
+        return $this->species;
+    }
+}
+
+class Dog extends Animal {
+    protected $breed;
+
+    public function __construct($name, $age, $species, $breed) {
+        parent::__construct($name, $age, $species);
+        $this->breed = $breed;
+    }
+
+    public function getBreed() {
+        return $this->breed;
+    }
+}
+
+class GoldenRetriever extends Dog {
+    protected $color;
+
+    public function __construct($name, $age, $breed, $color) {
+        parent::__construct($name, $age, 'dog', $breed);
+        $this->color = $color;
+    }
+
+    public function getColor() {
+        return $this->color;
+    }
+}
+
+$goldenRetriever = new GoldenRetriever('Buddy', 5, 'Golden Retriever', 'gold');
+
+echo $goldenRetriever->getName() . ' is a ' . $goldenRetriever->getAge() . '-year-old ' . $goldenRetriever->getSpecies() . ' of the ' . $goldenRetriever->getBreed() . ' breed, and has a ' . $goldenRetriever->getColor() . ' coat.';
+```
+
+This code would output the following:
+
+```
+Buddy is a 5-year-old dog of the Golden Retriever breed, and has a gold coat.
+```
 
 **Conclusion**
 
