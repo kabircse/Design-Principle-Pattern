@@ -14,13 +14,16 @@ There are several benefits to using inheritance in PHP. These benefits include:
 
 There are four types of inheritance in PHP:
 
-1 **Single inheritance:** This is the most common type of inheritance, and it occurs when a new class inherits from a single existing class.
-2 **Multiple inheritance:** This occurs when a new class inherits from two or more existing classes.
-3 **Hierarchical inheritance:** This occurs when a class inherits from another class, which in turn inherits from another class, and so on.
-4 **Interface inheritance:** This occurs when a class implements one or more interfaces.
+1. **Single inheritance:** This is the most common type of inheritance, and it occurs when a new class inherits from a single existing class.
+2. **Multiple inheritance:** This occurs when a new class inherits from two or more existing classes.
+3. **Hierarchical inheritance:** This occurs when a class inherits from another class, which in turn inherits from another class, and so on.
+4. **Interface inheritance:** This occurs when a class implements one or more interfaces.
 
-- Example-1: Single Inheritance
-﻿```php
+# Example
+
+1. **Single inheritance:**
+  
+```php
 class ParentClass {
   public $name;
 
@@ -60,10 +63,10 @@ The `ChildClass` also has its own `$age` property and `getAge()` method.
 The `$child` variable is an instance of the `ChildClass`. We can use the `getName()` and `getAge()` methods to access the `$name` and `$age` properties of the `$child` object.
 
 
-- Example-2: Multiple Inheritance
-Multiple inheritance is not supported in PHP. However, there are several ways to achieve similar results.
+2. **Multiple inheritance Example:**
+   Multiple inheritance is not supported in PHP. However, there are several ways to achieve similar results.
 
-**1. Using Interfaces:**
+**a. Using Interfaces:**
 
 Interfaces define a set of methods that a class must implement. By implementing multiple interfaces, a class can inherit methods from those interfaces. For example:
 
@@ -93,7 +96,7 @@ $circle->getArea();
 
 In this example, the `Circle` class implements both the `Drawable` and `Shape` interfaces. This allows it to inherit the `draw()` and `getArea()` methods from those interfaces.
 
-**2. Using Traits:**
+**b. Using Traits:**
 
 Traits are similar to interfaces, but they can contain both method and property declarations. This allows you to reuse code between classes more easily. For example:
 
@@ -121,7 +124,7 @@ $circle->getArea();
 
 In this example, the `Circle` class uses the `Drawable` and `Shape` traits. This allows it to inherit the `draw()` and `getArea()` methods from those traits.
 
-**3. Using Abstract Classes:**
+**c. Using Abstract Classes:**
 
 Abstract classes are classes that cannot be instantiated directly. They can only be used as parent classes for other classes. Abstract classes can contain abstract methods, which must be implemented by the child classes. For example:
 
@@ -142,7 +145,7 @@ $circle->getArea();
 
 In this example, the `Shape` class is an abstract class that defines the `getArea()` method. The `Circle` class extends the `Shape` class and implements the `getArea()` method. This allows the `Circle` class to inherit the `getArea()` method from the `Shape` class.
 
-**4. Using Composition:**
+**d. Using Composition:**
 
 Composition is a design pattern that allows you to create a new object by combining multiple existing objects. For example:
 
@@ -172,6 +175,9 @@ In this example, the `Drawing` class contains an array of `Shape` objects. The `
 
 Each of these techniques has its own advantages and disadvantages. The best approach for a particular situation will depend on the specific requirements of the application.
 
+
+3. **Hierarchical inheritance:**
+   
 
 **Conclusion**
 
