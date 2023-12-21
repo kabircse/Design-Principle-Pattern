@@ -29,7 +29,7 @@ Example Program:
     }
 ``` 
     
-1. Single Responsibility:
+1. **Single Responsibility:**
 ```php
         class Order
         {
@@ -55,7 +55,7 @@ Example Program:
         }
 ``` 
         
-2. Open-Closed Principle:
+2. **Open-Closed Principle:**
 Example Program:
 ```php
         class OrderRepository
@@ -120,9 +120,51 @@ Solution Program:
             public function update($order){/*...*/}
             public function delete($order){/*...*/}
         }
-``` 
+```
 
-3. The principle of interface separation (Interface segregation)
+3. **Liskov Substitution Principle (LSP):**
+Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.
+
+Example Program:
+```php
+// Not following LSP
+class Rectangle {
+    protected $width;
+    protected $height;
+
+    public function setWidth($width) {
+        $this->width = $width;
+    }
+
+    public function setHeight($height) {
+        $this->height = $height;
+    }
+
+    public function area() {
+        return $this->width * $this->height;
+    }
+}
+
+class Square extends Rectangle {
+    public function setWidth($width) {
+        $this->width = $width;
+        $this->height = $width;
+    }
+
+    public function setHeight($height) {
+        $this->width = $height;
+        $this->height = $height;
+    }
+}
+
+$rectangle = new Square();
+$rectangle->setWidth(5);
+$rectangle->setHeight(4);
+
+echo $rectangle->area(); // Output: 16, but it should be 20 for a rectangle
+```
+
+4. **The principle of interface separation (Interface segregation)**
 Example program:
   
 ```php
@@ -176,7 +218,7 @@ Solution Program:
         public function setMaterial($material){/*...*/}
     }
 ``` 
-4. Principle of Dependency Inversion:
+5. **Principle of Dependency Inversion:**
 Example Program:
 ```php
     class Customer
