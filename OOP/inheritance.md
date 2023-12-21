@@ -15,9 +15,9 @@ There are several benefits to using inheritance in PHP. These benefits include:
 There are four types of inheritance in PHP:
 
 1. **Single inheritance:** This is the most common type of inheritance, and it occurs when a new class inherits from a single existing class.
-2. **Multiple inheritance:** This occurs when a new class inherits from two or more existing classes.
-3. **Hierarchical inheritance:** Refers to a structure where multiple classes are derived from a single base or parent class. In this scenario, each subclass or child class inherits properties and methods from the same parent class, creating a hierarchy of classes.
-4. **Interface inheritance:** This occurs when a class implements one or more interfaces.
+2. **Multiple inheritance:** This occurs when a new class inherits from two or more existing classes. Not directly supported in PHP.
+3. **Multilevel inheritance:** Multilevel inheritance involves a chain of inheritance where a subclass becomes the parent class for another subclass. Each subclass inherits properties and methods from its immediate parent, creating a hierarchy.
+4. **Hierarchical inheritance:** Refers to a structure where multiple classes are derived from a single base or parent class. In this scenario, each subclass or child class inherits properties and methods from the same parent class, creating a hierarchy of classes.
 
 # Example
 
@@ -175,8 +175,43 @@ In this example, the `Drawing` class contains an array of `Shape` objects. The `
 
 Each of these techniques has its own advantages and disadvantages. The best approach for a particular situation will depend on the specific requirements of the application.
 
+3. **Multilevel inheritance:**
+```php
+class Animal {
+  public function eat() {
+    echo "The animal eats.\n";
+  }
+}
 
-3. **Hierarchical inheritance:**
+class Dog extends Animal {
+  public function bark() {
+    echo "The dog barks.\n";
+  }
+}
+
+class Cat extends Animal {
+  public function meow() {
+    echo "The cat meows.\n";
+  }
+}
+```
+
+Now, you can create objects of the `Dog` and `Cat` classes and call their methods to see the results.
+
+```php
+$dog = new Dog();
+$dog->eat(); // The animal eats.
+$dog->bark(); // The dog barks.
+
+$cat = new Cat();
+$cat->eat(); // The animal eats.
+$cat->meow(); // The cat meows.
+```
+
+Multilevel inheritance can be a useful tool for organizing your code and making it more maintainable. However, it is important to use it carefully, as it can make your code more complex and difficult to understand.
+   
+  
+4. **Hierarchical inheritance:**
 ```php
 class Animal {
     protected $name;
