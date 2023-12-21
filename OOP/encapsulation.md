@@ -36,7 +36,7 @@ It helps hide the internal state of an object and only exposes the necessary fun
 **In PHP, encapsulation is achieved using the access modifiers.**
 
 ## Example:
-
+```php
     class Car {
         private $model;
         public $color;
@@ -69,6 +69,7 @@ It helps hide the internal state of an object and only exposes the necessary fun
     // Using the setter method to modify the private property $model
     $car->setModel("Honda");
     echo $car->getModel(); // Output: Honda
+```
 
 In this example, the $model is a private property, so it cannot be accessed directly from outside the class. 
 Getter and setter methods (getModel() and setModel()) are provided to read and modify the private property, respectively. This way, the internal state of the object ($model) is encapsulated within the class, allowing controlled access.
