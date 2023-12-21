@@ -1,17 +1,16 @@
 # Design Principle
+**Design Principle:** The Design principle is a series of guidelines that developers can use to build software in an easy way to maintain and extend.
+//Design principle is a set of guidelines that ensure the OOP concept.
 
-Design Principle: Design principle is a series of guidelines that developers can use to build software in an easy way to maintain and extend.
-//Design principle is a set of guidelines that ensure OOP concept.
-
-SOLID principle:
-- Single responsibility
-- Open-closed
-- Liskov substitution
-- Interface segregation
-- Dependency inversion
+**SOLID principle:**
+1. Single Responsibility
+2. Open-closed
+3. Liskov substitution
+4. Interface segregation
+5. Dependency inversion
 
 Example Program:
- <?php
+```php
     class Order
     {
         public function calculateTotalSum(){/*...*/}
@@ -28,10 +27,10 @@ Example Program:
         public function update(){/*...*/}
         public function delete(){/*...*/}
     }
-   ?> 
+``` 
     
-    Single Responsibility:
-     <?php
+1. Single Responsibility:
+```php
         class Order
         {
             public function calculateTotalSum(){/*...*/}
@@ -54,11 +53,11 @@ Example Program:
             public function printOrder($order){/*...*/}
             public function showOrder($order){/*...*/}
         }
-      ?> 
+``` 
         
-    Open-Closed Principle:
-    Example Program:
-     <?php
+2. Open-Closed Principle:
+Example Program:
+```php
         class OrderRepository
         {
             public function load($orderID)
@@ -77,9 +76,9 @@ Example Program:
             public function update($order){/*...*/}
             public function delete($order){/*...*/}
         }
-        ?> 
-     Solution Program:   
-      <?php
+``` 
+Solution Program:   
+```php
         class OrderRepository
         {
             private $source;
@@ -121,12 +120,12 @@ Example Program:
             public function update($order){/*...*/}
             public function delete($order){/*...*/}
         }
-     ?> 
+``` 
 
-  The principle of interface separation (Interface segregation)
-  Example program:
+3. The principle of interface separation (Interface segregation)
+Example program:
   
-     <?php
+```php
         interface IItem
         {
             public function applyDiscount($discount);
@@ -138,9 +137,9 @@ Example Program:
             public function setCondition($condition);
             public function setPrice($price);
         }
-       ?> 
-  Solution Program:
-    <?php
+``` 
+Solution Program:
+```php
     interface IItem
     {
         public function setCondition($condition);
@@ -160,7 +159,7 @@ Example Program:
         public function applyPromocode($promocode);
     }
 
-    class Book implemets IItem, IDiscountable
+    class Book implements IItem, IDiscountable
     {
         public function setCondition($condition){/*...*/}
         public function setPrice($price){/*...*/}
@@ -168,7 +167,7 @@ Example Program:
         public function applyPromocode($promocode){/*...*/}
     }
 
-    class KidsClothes implemets IItem, IClothes
+    class KidsClothes implements IItem, IClothes
     {
         public function setCondition($condition){/*...*/}
         public function setPrice($price){/*...*/}
@@ -176,10 +175,10 @@ Example Program:
         public function setSize($size){/*...*/}
         public function setMaterial($material){/*...*/}
     }
-   ?> 
-   Principle of Dependency Inversion:
-   Example Program:
-    <?php
+``` 
+4. Principle of Dependency Inversion:
+Example Program:
+```php
     class Customer
     {
         private $currentOrder = null;
@@ -210,11 +209,11 @@ Example Program:
     {
         public function checkout($order){/*...*/}
     }
-    ?>  
+```  
      
 Solution:
-    <?php
-      class Customer
+```php
+class Customer
       {
           private $currentOrder = null;
 
@@ -250,6 +249,6 @@ Solution:
       {
           public function checkout($order){/*...*/}
       }
-      ?> 
+``` 
       
 link: https://www.apphp.com/tutorials/index.php?page=solid-principles-in-php-examples
