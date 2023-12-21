@@ -291,6 +291,4 @@ class Customer
       {
           public function checkout($order){/*...*/}
       }
-``` 
-      
-link: https://www.apphp.com/tutorials/index.php?page=solid-principles-in-php-examples
+```
